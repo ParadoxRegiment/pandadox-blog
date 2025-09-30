@@ -56,30 +56,9 @@ h1 div div {
     text-wrap: balance;
 }
 
-.sidenav {
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-    height: 100vh;
-    width: 0;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    background-color: #5565c9;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
+h2 {
+    font-size: 3rem;
 }
-
-/* .sidenav a {
-    /* padding: 8px 8px 8px 32px; */
-    /* padding-bottom: 30px; 
-    text-decoration: none;
-    font-size: 25px;
-    color: var(--secondary-color);
-    margin-left: 15px;
-} */
 
 #topBar {
     display: flex;
@@ -103,51 +82,77 @@ h1 div div {
     text-decoration: underline;
 }
 
-/*.sidenav a:hover {
-    color: #F85325;
-    text-decoration: underline;
+.nonHomeTopBar {
+    position: sticky;
+    top: 0.01vh;
+    /* background: var(--secondary-accent-color); */
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 15px;
-    font-size: 36px;
-    margin-left: 50px;
+#blogPosts {
+    width: 85vw;
+    justify-self: center;
+    /* background: var(--secondary-accent-color); */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "blogLeft blogRight";
 }
 
-#menubtn {
-    /* background: #4b5ccd;
-    position: fixed;
-    z-index: 9;
-    top: 20px;
-    left: 35px;
-    font-size: 35px;
-    color: white;
+#blogPosts div, #blogPosts div > img {
+    width: 42vw;
 }
 
-#menubtn:hover {
-    cursor: pointer;
+#blogPosts div h3{
+    margin-top: 0.1vh;
+    margin-bottom: 0;
+}
+
+#blogPosts div p{
+    font-size: 1.5rem;
+    margin-top: 0.5vh;
+    margin-bottom: 0;
+}
+
+.blogLeft {
+    display: flex;
+    gap: 1vh;
+    flex-direction: column;
+    text-align: left;
+    grid-area: blogLeft;
+}
+
+.blogRight {
+    justify-self: right;
+    display: flex;
+    gap: 1vh;
+    flex-direction: column;
+    text-align: right;
+    grid-area: blogRight;
+}
+
+.blogLeft div{
     background: var(--secondary-accent-color);
-    outline: 3px outset var(--secondary-accent-color);
-} */
+    border-bottom-left-radius: 20px;
+    padding-bottom: 0.2vh;
+}
+
+.blogRight div{
+    background: var(--secondary-accent-color);
+    border-bottom-right-radius: 20px;
+    padding-bottom: 0.2vh;
+}
+
+.blogLeft h3, .blogLeft p {
+    padding-left: 0.5vw;
+}
+
+.blogRight h3, .blogRight p {
+    padding-right: 0.5vw;
+}
 
 @media screen and (max-width: 450px) {
-    /* .sidenav {padding-top: 55px;} */
     .sidenav a {font-size: 1.5rem;}
     h1 {font-size: 2.85rem; margin-top: 2vh;}
+    h2 {font-size: 1.85rem;}
     body {font-size: 1.2rem;}
     main {font-size: 1.5rem;}
-    /* h1 div, h1 div div {width: 6em;} */
 }
-
-/* #overlay {
-    position:fixed;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    background-color: none;
-    z-index:8;
-    transition: 0.5s;
-} */
