@@ -21,17 +21,20 @@ body {
 
 main {
     /* color: black; */
+    font-size: 3rem;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 main div {
-    width: 50em;
-    background: var(--secondary-color);
+    width: 38em;
+    /* background: var(--secondary-color); */
 }
 
 h1 {
     margin-bottom: 5vh;
+    margin-top: 1vh;
     font-size: 6rem;
     font-weight: 700;
     justify-items: center;
@@ -69,16 +72,38 @@ h1 div div {
     transition: 0.5s;
 }
 
-.sidenav a {
+/* .sidenav a {
     /* padding: 8px 8px 8px 32px; */
-    /* padding-bottom: 30px; */
+    /* padding-bottom: 30px; 
     text-decoration: none;
     font-size: 25px;
     color: var(--secondary-color);
     margin-left: 15px;
+} */
+
+#topBar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-self: center;
+    align-content: space-around;
+    gap: 3vw;
+    margin: 0;
+    padding-top: 1vh;
 }
 
-.sidenav a:hover {
+#topBar a {
+    color: var(--main-text-color);
+    /* top: 5vh; */
+    text-decoration: none;
+}
+
+#topBar a:hover {
+    color: #F85325;
+    text-decoration: underline;
+}
+
+/*.sidenav a:hover {
     color: #F85325;
     text-decoration: underline;
 }
@@ -92,7 +117,7 @@ h1 div div {
 }
 
 #menubtn {
-    /* background: #4b5ccd; */
+    /* background: #4b5ccd;
     position: fixed;
     z-index: 9;
     top: 20px;
@@ -105,17 +130,18 @@ h1 div div {
     cursor: pointer;
     background: var(--secondary-accent-color);
     outline: 3px outset var(--secondary-accent-color);
-}
+} */
 
 @media screen and (max-width: 450px) {
     /* .sidenav {padding-top: 55px;} */
     .sidenav a {font-size: 1.5rem;}
-    h1 {font-size: 2.85rem; margin-top: 8vh;}
-    body {font-size: 0.85rem;}
+    h1 {font-size: 2.85rem; margin-top: 2vh;}
+    body {font-size: 1.2rem;}
+    main {font-size: 1.5rem;}
     /* h1 div, h1 div div {width: 6em;} */
 }
 
-#overlay {
+/* #overlay {
     position:fixed;
     top:0;
     bottom:0;
@@ -124,4 +150,4 @@ h1 div div {
     background-color: none;
     z-index:8;
     transition: 0.5s;
-}
+} */
