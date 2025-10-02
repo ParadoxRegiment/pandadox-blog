@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Tinos:700|Tinos:400');
+@import "color-pallete.css";
 :root {
     --main-text-color: white;
     --primary-color: #4b5ccd;
@@ -17,6 +18,7 @@ body {
     background-color: var(--primary-color);
     font-size: 2rem;
     font-weight: 400;
+    margin-bottom: 3.5vh;
 }
 
 main {
@@ -97,8 +99,14 @@ h2 {
     grid-template-areas: "blogLeft blogRight";
 }
 
-#blogPosts div, #blogPosts div > img {
+#blogPosts div, #blogPosts div img {
     width: 42vw;
+}
+
+#blogPosts div img {
+    outline: 0.1em solid var(--accent-color);
+    outline-offset: -0.1em;
+    /* color: var(--mint-green); */
 }
 
 #blogPosts div h3{
@@ -132,13 +140,46 @@ h2 {
 .blogLeft div{
     background: var(--secondary-accent-color);
     border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
     padding-bottom: 0.2vh;
+    transition: ease 0.5s;
+    transition: ease 0.5s;
+}
+
+.blogLeft img {
+    border-top-right-radius: 20px;
+}
+
+.blogLeft div:hover{
+    box-shadow: 4px 2px 2px 0 rgba(0, 0, 0, 0.432);
 }
 
 .blogRight div{
     background: var(--secondary-accent-color);
     border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
     padding-bottom: 0.2vh;
+    transition: ease 0.5s;
+    transition: ease 0.5s;
+}
+
+.blogRight img {
+    border-top-left-radius: 20px;
+}
+
+.blogRight div:hover{
+    box-shadow: -4px 2px 2px 0 rgba(0, 0, 0, 0.432);
+}
+
+.blogRight a, .blogLeft a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    transition: ease 0.5s;
+}
+
+.blogRight a:hover, .blogLeft a:hover {
+    color: var(--turquoise);
+    text-decoration: underline;
 }
 
 .blogLeft h3, .blogLeft p {
@@ -147,6 +188,27 @@ h2 {
 
 .blogRight h3, .blogRight p {
     padding-right: 0.5vw;
+}
+
+.blogDate {
+    margin: 0;
+    margin-top: 0.7vh;
+    padding: 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: rgb(194, 194, 194)
+}
+
+.blogLeft .blogDate {
+    float: right;
+    clear: both;
+    margin-right: 0.8vw;
+}
+
+.blogRight .blogDate {
+    float: left;
+    clear: both;
+    margin-left: 0.8vw;
 }
 
 @media screen and (max-width: 450px) {
