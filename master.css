@@ -90,103 +90,106 @@ h2 {
     /* background: var(--secondary-accent-color); */
 }
 
-#blogPosts {
+.gridContainer {
     width: 85vw;
     justify-self: center;
     /* background: var(--secondary-accent-color); */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "blogLeft blogRight";
+    grid-template-areas: "gridLeft gridRight";
 }
 
-#blogPosts div, #blogPosts div img {
+.gridContainer div, .gridContainer div img {
     width: 42vw;
 }
 
-#blogPosts div img {
-    outline: 0.1em solid var(--accent-color);
-    outline-offset: -0.1em;
+.gridContainer div img {
+    outline: 0.2em solid var(--secondary-accent-color);
+    outline-offset: -0.2em;
     /* color: var(--mint-green); */
 }
 
-#blogPosts div h3{
+.gridContainer div h3{
     margin-top: 0.1vh;
     margin-bottom: 0;
 }
 
-#blogPosts div p{
+.gridContainer div p{
     font-size: 1.5rem;
     margin-top: 0.5vh;
     margin-bottom: 0;
 }
 
-.blogLeft {
+.gridLeft {
     display: flex;
     gap: 1vh;
     flex-direction: column;
     text-align: left;
-    grid-area: blogLeft;
+    grid-area: gridLeft;
 }
 
-.blogRight {
+.gridRight {
     justify-self: right;
     display: flex;
     gap: 1vh;
     flex-direction: column;
     text-align: right;
-    grid-area: blogRight;
+    grid-area: gridRight;
 }
 
-.blogLeft div{
+.gridLeft div{
     background: var(--secondary-accent-color);
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
     padding-bottom: 0.2vh;
     transition: ease 0.5s;
     transition: ease 0.5s;
+    max-height: 56.5vh;
 }
 
-.blogLeft img {
+.gridLeft img {
     border-top-right-radius: 20px;
 }
 
-.blogLeft div:hover{
+.gridLeft div:hover{
     box-shadow: 4px 2px 2px 0 rgba(0, 0, 0, 0.432);
 }
 
-.blogRight div{
+.gridRight div{
     background: var(--secondary-accent-color);
     border-bottom-right-radius: 20px;
     border-top-left-radius: 20px;
     padding-bottom: 0.2vh;
     transition: ease 0.5s;
     transition: ease 0.5s;
+    max-height: 56.5vh;
+    overflow-x: hidden;
 }
 
-.blogRight img {
+.gridRight img {
     border-top-left-radius: 20px;
 }
 
-.blogRight div:hover{
+.gridRight div:hover{
     box-shadow: -4px 2px 2px 0 rgba(0, 0, 0, 0.432);
 }
 
-.blogRight a, .blogLeft a {
+.gridRight a, .gridLeft a {
     color: var(--main-text-color);
     text-decoration: none;
     transition: ease 0.5s;
 }
 
-.blogRight a:hover, .blogLeft a:hover {
+.gridRight a:hover, .gridLeft a:hover {
     color: var(--turquoise);
     text-decoration: underline;
 }
 
-.blogLeft h3, .blogLeft p {
+.gridLeft h3, .gridLeft p {
     padding-left: 0.5vw;
 }
 
-.blogRight h3, .blogRight p {
+.gridRight h3, .gridRight p {
     padding-right: 0.5vw;
 }
 
@@ -199,13 +202,13 @@ h2 {
     color: rgb(194, 194, 194)
 }
 
-.blogLeft .blogDate {
+.gridLeft .blogDate {
     float: right;
     clear: both;
     margin-right: 0.8vw;
 }
 
-.blogRight .blogDate {
+.gridRight .blogDate {
     float: left;
     clear: both;
     margin-left: 0.8vw;
@@ -215,6 +218,11 @@ h2 {
     .sidenav a {font-size: 1.5rem;}
     h1 {font-size: 2.85rem; margin-top: 2vh;}
     h2 {font-size: 1.85rem;}
+    .gridContainer div h3 {font-size: 1rem;}
+    .blogDate {font-size: 0.7rem;}
+    .gridContainer div p {font-size: 0.8rem;}
+    .gridLeft p {padding-left: 2vw;}
+    .gridRight p {padding-right: 2vw;}
     body {font-size: 1.2rem;}
     main {font-size: 1.5rem;}
 }
