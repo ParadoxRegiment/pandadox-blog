@@ -30,8 +30,27 @@ main {
 }
 
 main div {
-    width: 38em;
+    width: 85vw;
     /* background: var(--secondary-color); */
+}
+
+#contactLinks {
+    /* background: var(--secondary-accent-color); */
+    display: flex;
+    width: 75vw;
+    justify-self: center;
+    justify-content: space-around;
+    margin-top: 15vh;
+}
+
+#contactLinks a {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
+#contactLinks a:hover {
+    color: var(--atomic-tangerine);
+    text-decoration: underline;
 }
 
 h1 {
@@ -80,7 +99,7 @@ h2 {
 }
 
 #topBar a:hover {
-    color: #F85325;
+    color: var(--atomic-tangerine);
     text-decoration: underline;
 }
 
